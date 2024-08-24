@@ -94,6 +94,14 @@ managed_services = klipper
 info_tags = 
 	desc=Beacon Surface Scanner
 
+[update_manager klipper]
+channel = dev
+pinned_commit = 49c0ad6369670da574f550aa878ce9f6e1899e74
+
+[update_manager moonraker]
+channel = dev
+pinned_commit = 346a3d7c9dca6499bdef2957ca39a23c702b0268
+
 [history]
 
 [octoprint_compat]
@@ -123,4 +131,12 @@ path = ~/klipper-backup
 origin = https://github.com/Staubgeborener/klipper-backup.git
 managed_services = klipper
 primary_branch = main
+
+[notifier slack]
+url = https://hooks.slack.com/services/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
+events = error, paused
+body = "@justin ratrig status has changed to {event_name} as {event_args} saying: {event_message}"
+body_format = text
+title = STU-RAT error detected
+attach = 
 
